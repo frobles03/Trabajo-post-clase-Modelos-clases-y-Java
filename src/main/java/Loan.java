@@ -1,4 +1,5 @@
 public class Loan extends Product {
-    public float interest;
+    private float interest;
+    private Set<Person> lenders;
 
 }
