@@ -1,8 +1,8 @@
 import java.util.Scanner;
 public class Product {
-    public String name;
-    public String description;
-    public double managementFee;
+    private String name;
+    private String description;
+    private double managementFee;
 
     public void Product1(){
         name="tractor";
