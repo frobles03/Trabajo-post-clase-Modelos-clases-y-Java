@@ -1,3 +1,3 @@
 public class Cash extends Product {
-    public float interest;
+    private float interest;
 }
