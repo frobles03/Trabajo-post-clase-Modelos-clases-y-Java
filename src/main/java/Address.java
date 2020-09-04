@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class Address {
-    public String streetName;
-    public int  streetNumber;
-    public  String city;
-    public int zipCode;
-    public String state;
-    public String country;
+    private String streetName;
+    private int  streetNumber;
+    private  String city;
+    private int zipCode;
+    private String state;
+    private String country;
     public String example;
     public int exampleN;
     public  Address(){
