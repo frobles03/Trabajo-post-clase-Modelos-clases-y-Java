@@ -1,5 +1,5 @@
 public class ManagedFund extends Product {
-    public String funId;
-    public double distribution;
-    public  float currentUnitPrice;
+    private String funId;
+    private double distribution;
+    private  float currentUnitPrice;
 }
