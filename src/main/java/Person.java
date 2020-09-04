@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 public class Person {
-    public String firstName;
-    public String lastName;
-    public String email;
-    public String userName;
-    public String password;
-    public Address address;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String userName;
+    private String password;
+    private Address address;
     public String example;
 
 
