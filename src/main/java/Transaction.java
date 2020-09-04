@@ -1,9 +1,9 @@
 import java.util.Date;
 public class Transaction {
-    public double unit;
-    public double initialUnitPrice;
-    public double transaactionDate;
-    public Product product;
+    private double unit;
+    private double initialUnitPrice;
+    private double transaactionDate;
+    private Product product;
 
 
     public void currentValue(){
