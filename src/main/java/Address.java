@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.*;
 
 public class Address {
     private String streetName;
@@ -7,55 +8,47 @@ public class Address {
     private int zipCode;
     private String state;
     private String country;
-    public String example;
-    public int exampleN;
-    public  Address(){
-        System.out.println("ingrese el nombre de la calle en donde vive");
-        validadorLetras();
-        example=streetName;
-        example=null;
-        System.out.println("ingrese el numero de su casa");
-        validadorNumero();
-        exampleN=streetNumber;
-        exampleN=0;
-        System.out.println("ingrese nombre de la ciudad en que reside ");
-        validadorLetras();
-        example=city;
-        example=null;
-        System.out.println("ingrese codigo postal");
-        validadorNumero();
-        exampleN=zipCode;
-        exampleN=0;
-        System.out.println("ingreseen que pais reside");
-        validadorLetras();
-        example=country;
-        example=null;
-        System.out.println("ingrese en que estado reside");
-        validadorLetras();
-        example=state;
-        example=null;
 
 
-    }
 
-    public void validadorLetras() {
-        Scanner sc = new Scanner(System.in);
-
-        try {
-            example = sc.next();
-        }catch (Exception ex){
-            System.out.println("ingrese solo letras");
+    public void  address(String streetName,int  streetNumber, String city, int zipCode, String state,String country){
+        this.streetName= GenerarPalabra();
+        this.streetNumber=GenerarNumCalle();
+        this.city= GenerarPalabra();
+        this.zipCode=GenerarZip();
+        this.state=GenerarPalabra();
+        this.country=GenerarPalabra();
         }
 
-    }
-    public void validadorNumero() {
-        Scanner sc = new Scanner(System.in);
-
-        try {
-            example = sc.next();
-        }catch (Exception ex){
-            System.out.println("ingrese solo numeros");
+        /*
+    public void  address(String streetName,int  streetNumber, String city, int zipCode, String state,String country){
+        this.streetName= new streetName;
+        this.streetNumber=new streetNumber;
+        this.city=new city;
+        this.zipCode=new zipCode;
+        this.state=new state;
+        this.country= new country;
         }
-
+*/
+    public static String GenerarPalabra(){
+        String palabra = "";
+        int caracteres = (int)(Math.random()*20)+2;
+        for (int i=0; i<caracteres; i++){
+            int codigoAscii = (int)Math.floor(Math.random()*(122 -97)+97);
+            palabra = palabra + (char)codigoAscii;
+        }
+        return palabra;
     }
+    public static int GenerarZip(){
+        Random r = new Random();
+        int valor = r.nextInt(4780000)+1;
+        return valor;
+    }
+
+    public static int GenerarNumCalle(){
+        Random r = new Random();
+        int valor = r.nextInt(9999)+1;
+        return valor;
+    }
+
 }
